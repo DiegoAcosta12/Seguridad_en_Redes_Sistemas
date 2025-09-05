@@ -6,7 +6,7 @@ Can you crack the password to get the flag?Download the password checker [here]
 
 SOLUCION:
 - Descargué todos los archivos y los puse en la misma carpeta:
-
+  
 `C:\Users\Diego\Downloads\TAREAS`
 
 - Para encontrar la contraseña correcta, usé un pequeño script en Python que probaba las 7 opciones posibles comparando el hash MD5 de cada una con `level3.hash.bin`:
