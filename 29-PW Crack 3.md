@@ -16,6 +16,7 @@ SOLUCION:
 - Esto me permitió determinar rápidamente que la contraseña correcta era: **`f159`**.
 - Finalmente, ejecuté `level3.py` con Python 3 e ingresé la contraseña, lo que descifró el archivo y mostró la flag.
 
+  **SOLUCION:** `picoCTF{m45h_fl1ng1ng_cd6ed2eb}` 
 
 NOTAS ADICIONALES:
 - Las contraseñas estaban validadas mediante su hash MD5, por lo que no se podía adivinar directamente la correcta sin comparar hashes.
