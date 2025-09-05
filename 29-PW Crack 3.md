@@ -16,8 +16,11 @@ SOLUCION:
 - Esto me permitió determinar rápidamente que la contraseña correcta era: **`f159`**.
 - Finalmente, ejecuté `level3.py` con Python 3 e ingresé la contraseña, lo que descifró el archivo y mostró la flag.
 
+<<<<<<< HEAD
 **SOLUCION:** `picoCTF{m45h_fl1ng1ng_cd6ed2eb}` 
 
+  
+>>>>>>> c6dcb8c (Mis cambios antes de actualizar del remoto)
 NOTAS ADICIONALES:
 - Las contraseñas estaban validadas mediante su hash MD5, por lo que no se podía adivinar directamente la correcta sin comparar hashes.
 - Usar un pequeño script para probar todas las opciones de manera automatizada fue más rápido que fuerza bruta manual.

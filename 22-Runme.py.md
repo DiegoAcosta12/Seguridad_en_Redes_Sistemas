@@ -22,4 +22,4 @@ NOTAS ADICIONALES:
 - `cat` permite inspeccionar rápidamente el contenido de un archivo de texto.
 
 REFERENCIAS:
-No use paginas externas.
+No use paginas externas a excepción del shell de picoCTF.
