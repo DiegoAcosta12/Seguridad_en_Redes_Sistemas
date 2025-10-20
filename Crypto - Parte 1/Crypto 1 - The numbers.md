@@ -1,91 +1,85 @@
 **RETO:**  
-The numbers
+The Numbers
 
 **DESCRIPCIÓN:**  
-Cryptography can be easy, do you know what ROT13 is? cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}
+The numbers... what do they mean?
 
 **SOLUCIÓN:**
 
-1. **Identificación del cifrado**:
+1. **Descarga y análisis inicial de la imagen**:
     
-    - El reto menciona explícitamente ROT13, que es un cifrado de sustitución simple
+    - Se descargó la imagen `the_numbers.png` desde la URL proporcionada
         
-    - ROT13 desplaza cada letra 13 posiciones en el alfabeto
+    - El archivo fue identificado como imagen PNG de 774x433 píxeles
         
-    - Es un cifrado recíproco: aplicar ROT13 dos veces devuelve el texto original
+    - La imagen contenía una secuencia de números organizados en formato específico
         
-2. **Análisis del texto cifrado**:
+2. **Identificación del esquema de codificación**:
     
-    - Texto proporcionado: `cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}`
+    - Los números observados en la imagen seguían el patrón: `16 9 3 15 3 20 6 { ... }`
         
-    - El formato sugiere que está en el patrón típico de flags: `picoCTF{...}`
+    - Se identificó que correspondía al cifrado **A1Z26** donde cada número representa una letra del alfabeto
         
-    - Las letras `cvpbPGS` deberían corresponder a `picoCTF` después de ROT13
+    - Esquema: A=1, B=2, C=3, D=4, E=5, F=6, ..., Z=26
         
-3. **Proceso de descifrado**:
+3. **Proceso de decodificación**:
     
-    - Se aplicó ROT13 carácter por carácter:
+    - **Primera parte (encabezado)**:
         
-        - `c` → `p`
+        - 16 = P
             
-        - `v` → `i`
+        - 9 = I
             
-        - `p` → `c`
+        - 3 = C
             
-        - `b` → `o`
+        - 15 = O
             
-        - `P` → `C`
+        - 3 = C
             
-        - `G` → `T`
+        - 20 = T
             
-        - `S` → `F`
+        - 6 = F
             
-        - `{` → `{` (sin cambios)
+        - Resultado: `PICOCTF{`
             
-        - `abg_gbb_onq_bs_n_ceboyrz` → `not_too_bad_of_a_problem`
+    - **Segunda parte (contenido)**:
+        
+        - Los números dentro de las llaves fueron decodificados secuencialmente
             
-        - `}` → `}` (sin cambios)
+        - La secuencia completa se tradujo a: `thenumbersmason`
             
-4. **Métodos de descifrado utilizados**:
+        - El formato final mantuvo las llaves para formar la flag completa
+            
+4. **Verificación del resultado**:
     
-    - **Método manual**: Aplicando ROT13 manualmente usando el alfabeto
+    - La flag obtenida siguió el formato estándar PICOCTF
         
-    - **Método Python**: Usando la librería codecs integrada
+    - El mensaje "thenumbersmason" tiene coherencia con el tema del reto
         
-    - **Método terminal**: Usando el comando `tr` en sistemas Unix
-        
-5. **Verificación del resultado**:
-    
-    - El texto descifrado mantiene el formato correcto de flag: `picoCTF{...}`
-        
-    - El mensaje "not_too_bad_of_a_problem" tiene sentido en el contexto del reto
-        
-    - Se verificó que aplicar ROT13 al resultado devuelve el texto original
+    - Se confirmó que era la solución correcta al reto
         
 
 **FLAG OBTENIDA:**  
-`picoCTF{not_too_bad_of_a_problem}`
+`picoCTF{thenumbersmason}`
 
 **NOTAS ADICIONALES:**
 
-- La flag `not_too_bad_of_a_problem` refleja apropiadamente la naturaleza simple del cifrado ROT13
+- La flag `thenumbersmason` completa la frase "the numbers mason what do they mean", una referencia al videojuego Call of Duty: Black Ops
     
-- ROT13 es más una codificación que un cifrado seguro, ya que no utiliza clave secreta
+- Este reto demostró un cifrado de sustitución simple pero efectivo (A1Z26)
     
-- Este cifrado fue popular en foros de internet para ocultar spoilers o respuestas sin proporcionar seguridad real
+- La técnica A1Z26 es común en retos de criptografía básica y puzzles
     
-- El reto demostró un concepto fundamental en criptografía: cifrados por sustitución
+- El reto enfatizó la importancia de reconocer patrones numéricos comunes en desafíos CTF
     
-- ROT13 preserva mayúsculas/minúsculas y caracteres no alfabéticos, lo que es útil para mantener el formato
+- La conversión manual de números a letras fue straightforward una vez identificado el esquema
     
-- La naturaleza recíproca de ROT13 (ROT13(ROT13(text)) = text) lo hace fácil de implementar
+- No se requirieron herramientas especializadas más allá de la comprensión del cifrado A1Z26
     
-- Este ejercicio sirvió como introducción a conceptos criptográficos básicos
+- El formato de la flag con números al inicio (16 9 3 15 3 20 6) sirvió como pista autocontenida del método de solución
     
-- El reto enfatizó que no todos los problemas de criptografía son complejos; algunos tienen soluciones simples
+- Este ejercicio reforzó habilidades de pensamiento lateral y reconocimiento de esquemas de codificación simples
     
-- La herramienta `tr` en Unix/Linux es particularmente útil para este tipo de transformaciones de caracteres
+- La referencia cultural en la flag añadió un elemento divertido al desafío
     
-- Python proporciona una implementación nativa de ROT13 a través del módulo codecs, demostrando la integración de herramientas criptográficas básicas en lenguajes de programación modernos
-    
-- El formato de la flag seguía el patrón estándar, haciendo reconocible inmediatamente cuando se había aplicado correctamente el descifrado
+- El reto sirvió como introducción accesible a conceptos de criptografía para principiantes
